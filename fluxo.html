@@ -1,0 +1,109 @@
+<!--
+    o Browser determina qual regra aplicar e como aplicar, caso haja diversas regras para o mesmo elemento
+
+    * o fluxo de leitura da sua folha de estilo é de cima para baixo
+
+    ****IMPORTATNTE CONSIDERAR****
+
+    1. Origem da folha de estilo
+    2. Especificidade
+    3. Importância
+
+    **TIPOS DE ESTILOS**
+
+    inline > tag style > tag link
+
+    * Especificidade
+
+    Cálculo matemático desenvolvido automaticamente pela regra css, onde cada tipo de seletar e origem do estilo possuem valores a serem considerados
+
+    0. Universal selector, combinator e pseudo-class {:not()}
+    1. Elementos do tipo seletor e pseudo-elementos (::before, ::after)
+    10. Classes e atributos de seletores {(type="radio")}
+    100.Seletor ID
+    1000. Inline
+
+
+    --------------------------------------
+
+
+    #At-rules
+        São regras relacionadas ao comportamento do CSS, começa com um sinal de @ seguido do identificador e do valor
+
+        São as seguintes:
+
+        @import serve para incluir um CSS externo
+
+        @import url("https://linkexterno.com.br/style.css")
+
+        @media são regras condicionais para vários dispositivos
+
+        @media (min-width: 365px) {
+
+        }
+
+        @font-face é para colocar fontes externas.
+
+        @font-face {
+
+        }
+
+        @keyframes serve para as animations do CSS
+
+        @keyframes animationname {
+
+        }
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="./assets/style.css">
+
+
+    <style>
+        h1 {
+            background: blue;
+        }
+
+        #super-title{
+            background: red;
+        }
+
+        h1 {
+            background: green;
+        }
+
+        .my-title-2 {
+            background: yellow;
+        }
+        strong{
+            color: blueviolet;
+        }
+        .my-text strong {
+            color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="super-title">Testando Especificidade</h1>
+    <p class="my-text">
+        <strong>Lorem ipsum</strong>  dolor sit amet consectetur adipisicing elit. Inventore eum, ducimus officia fuga reiciendis sunt esse aperiam quas! <br/> Autem alias a impedit facilis dignissimos reprehenderit. <br/> Esse porro dolorem accusantium harum.
+    </p>
+    <h1 class="my-title-2">Testando Especificidade</h1>
+    <p class="my-text-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, possimus. <br/> Voluptas fugiat, alias quia cupiditate deserunt temporibus excepturi quas labore itaque atque, sunt distinctio vero facere nobis sit fugit reprehenderit. <br />
+        Lorem ipsum dolor, sit amet consectetur <strong> adipisicing elit.</strong> Vero hic accusantium maiores, facilis quo sed!
+    </p>
+</body>
+</html>
+
+
