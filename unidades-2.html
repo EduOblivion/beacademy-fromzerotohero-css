@@ -46,7 +46,7 @@
     Como converter px para ren
     valor em px / valor da font do user agent
 
-    Ex: 32px / 16px = 2ren
+    Ex: 32px / 16px = 2rem
 
     Dica do Professor 2:
 
@@ -59,8 +59,51 @@
     10*100 = 1000
     1000/16 = 62,6%
 
-
-
-
+    :root {
+        font-size: 62.5%
+    }
 
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidade de Medida</title>
+
+    <style>
+        :root {
+            font-size: 62.5%;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            margin-bottom: 6.4rem;
+        }
+
+        p {
+            margin-top: 3.2rem;
+            font-size: 1.6rem;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <main>
+        <section>
+            <article>
+                <div class="card">
+                    <h2>Artigo sobre Unidades</h2>
+                    <p class="text-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facilis accusantium velit optio id! Dicta ex voluptatibus maxime deserunt esse magni dolore, officiis beatae at facilis ea dolorum expedita voluptas!</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+</body>
+</html>
