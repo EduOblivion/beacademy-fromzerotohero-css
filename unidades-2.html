@@ -1,0 +1,66 @@
+<!--
+
+    Distâncias absolutas <lenght>
+    São fixas e não alteram seu valor.
+
+    | Unidade | Nome               | Equivalência        |
+    |---------|--------------------|---------------------|
+    | cn      | Centímetros        | 1cm = 95px/2.54     |
+    | in      | Inches (polegadas) | 1in = 2,54cm = 96px |
+    | px      | Pixels             | 1px = 1/96th of 1in |
+
+    * o mais comum e mais utilizado é o px
+    * não é recomendada usar cm
+
+    Distância relativas
+
+    São relativas a um outro valor, pode ser o elemento pai, ou root, ou o tamanho da tela.
+    Benefício: Maior adaptação aos diferentes tipos de tela.
+
+    | Unidade | Relativo a                                   |
+    |---------|----------------------------------------------|
+    | em      | Tamanho da font do elemento pai              |
+    | rem     | Tamanho da font do elemento raiz (root/html) |
+    | vw      | 1% da viewport width                         |
+    | vh      | 1% da viewport lenght                        |
+
+    :root {
+        font-size: 18px;
+    }
+
+    /* OU */
+
+    html {
+        font-size:18px;
+    }
+
+    Documentação: https://ww.we.org/STYLE/Examples/007/units.pt_br.html
+    Documentação MON: https://developer.mozilla.org/eng-US/docs/Learn/CSS/Building_blocks/Values_and_units
+
+    Dica do Professor 1:
+
+    Qunado trabalhamos com desig responsivos, ou seja, layouts flexiveis que se adaptam para qualquer tipo de tela, é interessante utilizar a unidade ren.
+
+    User agent (Browser), boa parte deles, usam o font-size: 16px
+
+    Como converter px para ren
+    valor em px / valor da font do user agent
+
+    Ex: 32px / 16px = 2ren
+
+    Dica do Professor 2:
+
+    Outra possibilidade é mudar a configuração do user agent de 16px para 10px, usando % e utilizando a regra de 3 da matemática, desta forma conseguimos cravar a unidade ren.
+
+    Transformar a user agent de 16 para 10 px em %
+
+    User Agent = 16px = 100%
+
+    10*100 = 1000
+    1000/16 = 62,6%
+
+
+
+
+
+-->
