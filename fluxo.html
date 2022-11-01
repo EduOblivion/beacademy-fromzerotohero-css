@@ -54,6 +54,29 @@
 
         }
 
+        **Combinadores (Combinators)**
+
+        Combinadores são utilizados para buscar e combinar seletores a fim de aplicar uma estilização.
+
+        Tipos:
+
+        **Descendent combinator**
+
+        Identificado por um espaço entre os seletores.
+        - busca um elemento dentro de outro
+
+        body ul li
+
+        **Child combinator**
+
+        Identificado pelo sinal > entre dois seletores
+        - Seleciona somente o elemento filho direto do pai
+        - Elementos depois do filho direto serão desconsiderados
+
+        **Adjacent sibling combinator**
+        Identificado pelo sinal de + entre dois seletores
+        - Busca somente o elemento do lado direto que é o irmão direto da hierarquia
+
 -->
 
 <!DOCTYPE html>
@@ -68,7 +91,7 @@
     <link rel="stylesheet" href="./assets/style.css">
 
 
-    <style>
+    <!--    <style>
         h1 {
             background: blue;
         }
@@ -90,19 +113,56 @@
         .my-text strong {
             color: aqua;
         }
+    </style> -->
+
+    <style>
+            
+       /* body ul li {
+            background: green;
+            color: red;
+        }
+
+        body section div ul li {
+            background: yellow;
+            color: blue;
+        } */
+
+       h1 ~ p {
+        color: green;
+       }
+            
     </style>
 
 </head>
 <body>
-    <h1 id="super-title">Testando Especificidade</h1>
-    <p class="my-text">
-        <strong>Lorem ipsum</strong>  dolor sit amet consectetur adipisicing elit. Inventore eum, ducimus officia fuga reiciendis sunt esse aperiam quas! <br/> Autem alias a impedit facilis dignissimos reprehenderit. <br/> Esse porro dolorem accusantium harum.
-    </p>
-    <h1 class="my-title-2">Testando Especificidade</h1>
-    <p class="my-text-2">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, possimus. <br/> Voluptas fugiat, alias quia cupiditate deserunt temporibus excepturi quas labore itaque atque, sunt distinctio vero facere nobis sit fugit reprehenderit. <br />
-        Lorem ipsum dolor, sit amet consectetur <strong> adipisicing elit.</strong> Vero hic accusantium maiores, facilis quo sed!
-    </p>
+
+<!--   <div>
+        <p>Teste</p>
+    </div>
+    <ul>
+        <li>Testando Combinadores</li>
+    </ul>
+    <div>outro formato</div>
+    <section>
+        <div>
+            <ul>
+                <li>Outro Marcador</li>
+            </ul>
+        </div>
+    </section>
+-->
+
+    <h1>Título</h1>
+    <p>Mais um parágrafo</p>
+
+    <button>Enviar</button>
+
+    <p>Outro paragrafo</p>
+    <p>Outro paragrafo</p>
+    <p>Outro paragrafo</p>
+    <p>Outro paragrafo</p>
+
+
 </body>
 </html>
 
