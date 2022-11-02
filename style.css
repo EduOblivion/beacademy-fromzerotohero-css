@@ -1,8 +1,40 @@
-ul li:nth-child(even){
-    background: red;
+.btn-submit{
+    padding: 13px;
     color: antiquewhite;
+    background: rgb(0,112,216);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s;
 }
-ul li:nth-child(odd){
-    background: blue;
-    color: yellow;
+
+.btn-submit:hover {
+    background: rgb(102,20,200);
+
 }
+
+.btn-submit:focus {
+    background: red;
+}
+
+input[type=text] {
+    border: 1px solid #f2f2f2;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    outline: none;
+    transition: .2s;
+}
+
+input[type=text]:hover {
+    border:1px solid rgb(102,20,200) ;
+}
+
+input[type=text]:disabled {
+    background: red;
+}
+
+input[type=text]:disabled::placeholder {
+    color: rgb(255, 255, 255);
+}
+
