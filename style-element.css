@@ -1,0 +1,28 @@
+ul {
+    position: relative;
+}
+
+ul li::after {
+    content:"";
+    background: red;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    position: absolute;
+    left: 140px;
+}
+
+ul li::before {
+    content:"";
+    background: blue;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    position: absolute;
+left: 0px;
+   
+}
+
+p::first-line {
+    color: red;
+}
